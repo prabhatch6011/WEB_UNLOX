@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="minor.css">
+
+</head>
+<body>
+
+    <header>
+        <h1><i class="fa-solid fa-code"></i> Minor Project 03</h1>
+        <p>Interactive Weather & Movie Search Dashboard</p>
+        <div class="nav-buttons">
+            <button id="showWeatherBtn" class="tab-btn active">Weather App</button>
+            <button id="showMovieBtn" class="tab-btn">Movie Search App</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= WEATHER APP SECTION ================= -->
+        <section id="weatherSection" class="app-section active">
+            <div class="card">
+                <h2><i class="fa-solid fa-cloud-sun"></i> Weather App</h2>
+                <div class="search-box">
+                    <input type="text" id="cityInput" placeholder="Enter city name...">
+                    <button id="getWeatherBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
+                
+                <div id="weatherError" class="error-msg hidden"></div>
+
+                <div id="weatherResult" class="result-container hidden">
+                    <h3 id="cityName">--</h3>
+                    <div class="weather-info">
+                        <div class="temp-box">
+                            <span id="temperature">--</span><span class="unit">°C</span>
+                        </div>
+                        <p id="weatherCondition" class="condition">--</p>
+                    </div>
+                    <div class="extra-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: <strong id="humidity">--</strong>%</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind Speed: <strong id="windSpeed">--</strong> m/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MOVIE SEARCH APP SECTION ================= -->
+        <section id="movieSection" class="app-section">
+            <div class="card wide-card">
+                <h2><i class="fa-solid fa-film"></i> Movie Search App</h2>
+                <div class="search-box">
+                    <input type="text" id="movieInput" placeholder="Search movies (e.g., Avengers, Batman)...">
+                    <button id="getMovieBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
+
+                <div id="movieError" class="error-msg hidden"></div>
+
+                <div id="movieResult" class="movie-grid">
+                    <!-- Movie cards will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rivoquix Learning | Minor Project 03</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
